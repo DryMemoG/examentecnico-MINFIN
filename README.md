@@ -21,4 +21,5 @@ Este proyecto es una prueba técnica que utiliza Django. A continuación, se det
    python manage.py createsuperuser
    python manage.py runserver
 
+2. Acceder a través de [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
