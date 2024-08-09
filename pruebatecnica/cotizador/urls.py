@@ -4,6 +4,7 @@ from .views import *
 
 urlpatterns = [
     path("", views.index, name="MainPage"),
+    path('logout/', custom_logout, name='logout'),
     #cliente
     path('cliente/', ClienteListView.as_view(), name="ClienteList"),
     path('cliente/<int:pk>/', ClienteDetailView.as_view(), name="ClienteDetail"),

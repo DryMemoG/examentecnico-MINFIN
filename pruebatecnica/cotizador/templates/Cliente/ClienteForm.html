@@ -1,0 +1,38 @@
+{% extends 'base_generic.html' %}s
+{% block content %}
+<div class="mb-3 container-sm">
+    <div class="form-floating">
+        <form method="post">
+            {% csrf_token %}
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    {{ form.errors }}
+                </div>
+            {% endif %}
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-text">NIT</span>
+                    <input type="text" class="form-control" id="{{form.NIT.id_for_label}}" name="{{form.NIT.name}}" placeholder="NIT">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Nombres y Apellidos</span>
+                    <input type="text" class="form-control" id="{{form.nombres.id_for_label}}" name="{{form.nombres.name}}" placeholder="Nombres">
+                    <input type="text" class="form-control" id="{{form.apellidos.id_for_label}}" name="{{form.apellidos.name}}" placeholder="Apellidos">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Email</span>
+                    <input type="email" class="form-control" id="{{form.email.id_for_label}}" name="{{form.email.name}}" placeholder="Correo Electrónico">
+                    <span class="input-group-text">Teléfono</span>
+                    <input type="text" class="form-control" id="{{form.telefono.id_for_label}}" name="{{form.telefono.name}}" placeholder="Teléfono">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Dirección</span>
+                    <input type="text" class="form-control" id="{{form.direccion.id_for_label}}" name="{{form.direccion.name}}" placeholder="Dirección">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

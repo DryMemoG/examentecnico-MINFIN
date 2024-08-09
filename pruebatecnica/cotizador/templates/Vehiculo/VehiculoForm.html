@@ -1,0 +1,33 @@
+{% extends 'base_generic.html' %}s
+{% block content %}
+<div class="mb-3 container-sm">
+    <div class="form-floating">
+        <form method="post">
+            {% csrf_token %}
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    {{ form.errors }}
+                </div>
+            {% endif %}
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-text">Marca</span>
+                    {{ form.marca }}
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Línea y Modelo</span>
+                    <input type="text" class="form-control" id="{{form.linea.id_for_label}}" name="{{form.linea.name}}" placeholder="Línea">
+                    <input type="text" class="form-control" id="{{form.modelo.id_for_label}}" name="{{form.modelo.name}}" placeholder="Modelo">
+                    <input type="text" class="form-control" id="{{form.precio.id_for_label}}" name="{{form.precio.name}}" placeholder="Precio">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Descripcion</span>
+                    <input type="text" class="form-control" id="{{form.descripcion.id_for_label}}" name="{{form.descripcion.name}}" placeholder="Detalles">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

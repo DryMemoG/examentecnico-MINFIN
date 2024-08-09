@@ -1,0 +1,12 @@
+
+{% block content %}
+    <h4><b>NIT:</b> {{ object.NIT}}</h4> 
+    <h5><b>Nombre:</b> {{ object.nombres}} {{ object.apellidos}} </h5> 
+    <p><b>Información de Contacto: </b></p>
+    <ul>
+        <li><b>Teléfono: </b> {{ object.telefono}}</li>
+        <li><b>Email: </b> {{ object.nombres}} </li>
+        <li><b>Dirección: </b>{{ object.direccion}}</li>
+    </ul>
+    
+{% endblock %}

@@ -1,0 +1,17 @@
+{% block content %}
+    <h4><b>Cotización Realizada el: </b> {{ object.fecha}}</h4> 
+    <h5><b>Apreciable Señor/a: </b> {{ object.NIT}} </h5>
+    Usted ha solicitado la cotización de un vehículo {{ object.idAuto}}, a continuación le comparto los detalles del mismo
+    <p><b>Especificaciones:  </b></p>
+    <ul>
+        <li><b>Marca: </b> {{ object.idAuto.marca}}</li>
+        <li><b>Linea: </b> {{ object.idAuto.linea}} </li>
+        <li><b>Año: </b>{{ object.idAuto.modelo}}</li>
+        <li><b>Precio: </b>{{ object.idAuto.precio}}</li>
+        <li><b>Detalles: </b>{{ object.idAuto.descripcion}}</li>
+    </ul>
+    Se le agendará una prueba de manejo y se le enviarán detalles a su número de teléfono: 
+    {{object.NIT.telefono}} así como otros detalles del auto a su dirección de correo electrónico: 
+    {{object.NIT.email}} y en la fecha asignada un asesor de ventas se presentará para 
+    una prueba de manejo a la dirección: {{object.NIT.direccion}}. 
+{% endblock %}

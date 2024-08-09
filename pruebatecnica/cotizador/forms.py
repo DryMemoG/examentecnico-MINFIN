@@ -4,7 +4,7 @@ from .models import *
 class ClienteForm(forms.ModelForm):
     class Meta:
         model = Cliente
-        fields = ("NIT","nombres", "apellidos", "email", "telefono", "direccion")
+        fields = ("NIT", "nombres", "apellidos", "email", "telefono", "direccion")
 
 class VehiculoForm(forms.ModelForm):
     class Meta:
@@ -13,5 +13,5 @@ class VehiculoForm(forms.ModelForm):
 
 class CotizacionForm(forms.ModelForm):
     class Meta:
-        model = Vehiculo
+        model = Cotizacion
         fields = ("NIT", "idAuto")

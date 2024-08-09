@@ -1,0 +1,12 @@
+{% block content %}
+    <h4><b>Auto:</b> {{ object.marca}} {{ object.linea}}</h4> 
+    <p><b>Especificaciones:  </b></p>
+    <ul>
+        <li><b>Marca: </b> {{ object.marca}}</li>
+        <li><b>Linea: </b> {{ object.linea}} </li>
+        <li><b>Año: </b>{{ object.modelo}}</li>
+        <li><b>Precio: </b>{{ object.precio}}</li>
+        <li><b>Detalles: </b>{{ object.descripcion}}</li>
+    </ul>
+    
+{% endblock %}
